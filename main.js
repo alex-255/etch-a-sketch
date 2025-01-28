@@ -13,10 +13,21 @@ const printSquares = (perSide) => {
 
   const squares = document.querySelectorAll(".container > div");
   squares.forEach((square) => {
-    square.addEventListener("mouseenter", (event) => {
-      square.style.backgroundColor = "lightblue";
+    let opacity = 0.1;
+    square.addEventListener("mouseenter", () => {
+      square.style.backgroundColor = colorRandomizer();
+      square.style.opacity = opacity;
+      opacity = opacity < 1 ? opacity + 0.1 : 1;
     });
   });
+};
+
+const colorRandomizer = () => {
+  const randR = Math.floor(Math.random() * 256);
+  const randG = Math.floor(Math.random() * 256);
+  const randB = Math.floor(Math.random() * 256);
+  const RGB = "rgb(" + randR + ", " + randG + ", " + randB + ")";
+  return RGB;
 };
 
 printSquares(numOfSquaresPerSide);
