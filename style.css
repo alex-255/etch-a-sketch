@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 160px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container div {
+width: 10px;
+height: 10px;
+border: 1px solid black;
+}
