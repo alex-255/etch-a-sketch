@@ -13,11 +13,11 @@ const printSquares = (perSide) => {
 
   const squares = document.querySelectorAll(".container > div");
   squares.forEach((square) => {
-    let opacity = 0.1;
+    let opacity = 0;
     square.addEventListener("mouseenter", () => {
       square.style.backgroundColor = colorRandomizer();
-      square.style.opacity = opacity;
       opacity = opacity < 1 ? opacity + 0.1 : 1;
+      square.style.opacity = opacity;
     });
   });
 };
