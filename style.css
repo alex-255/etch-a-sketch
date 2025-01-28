@@ -2,15 +2,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cell-width: 25px;
+}
+
 .container {
-    width: 160px;
+    width: 960px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .container div {
-width: 10px;
-height: 10px;
+width: calc(960px / 16);
+height: calc(960px / 16);
 border: 1px solid black;
 }
